@@ -17,6 +17,7 @@ def ajouter_tache():
     print(f"La tache '{tache}' a été ajoutée à votre To Do List")
     print("\n",taches)
 
+
 while True:
     menu()
     
