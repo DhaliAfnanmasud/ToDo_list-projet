@@ -2,10 +2,34 @@
 
 print("Bienvenue dans votre To Do List !")
 
+taches = []
+
 def menu():
     print("\n----To Do List ----")
     print("1. Ajouter une tâche")
     print("2. Afficher les tâches")
     print("3. Marquer une tâche comme terminée")
     print("4. Quitter")
-    print("\nQue souhaitez-vous faire ?")
+
+def ajouter_tache():
+    tache = input("\nEntrez votre tâche : ")
+    taches.append(tache)
+    print(f"La tache '{tache}' a été ajoutée à votre To Do List")
+    print("\n",taches)
+
+while True:
+    menu()
+    
+    choix = input ("\nQuelle est votre choix ? : ")
+    match choix :
+        case "1" :
+            ajouter_tache()
+        case "2" :
+            pass
+        case "3" :
+            pass
+        case "4" :
+            print("\nA bientot dans votre To Do List !")
+            break
+        case _ :
+            print("\nChoix invalide ! Veuillez réesayer.")
