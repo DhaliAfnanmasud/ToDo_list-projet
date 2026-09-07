@@ -1,11 +1,12 @@
 # Mini Projet : To Do list -------------------------------------------------------------
 
 def menu():
-    print("\n----To Do List ----")
+    print("\n----------------------To Do List ------------------------------")
     print("1. Ajouter une tâche")
     print("2. Afficher les tâches")
     print("3. Marquer une tâche comme terminée")
     print("4. Quitter")
+
 
 def ajouter_tache(taches):
     nb_taches = int(input("\nCombien de tâches voulez-vous ajouter ? : " ))
@@ -18,13 +19,15 @@ def ajouter_tache(taches):
     else:
         print("Le nombre de tâches à ajouter doit être supérieur à 0 ! Veuillez réesayer.")
 
+
 def montrer_tache(taches):
     if taches:
-        print("\nVoici votre To Do List : ")
+        print("\nVoici votre To Do List ----------------------------------------\n")
         for i, tache in enumerate(taches, start=1):
             print(f"{i}. {tache}")
     else:
         print("\nVotre To Do List est vide !")
+
 
 def supprimer_tache(taches):
     montrer_tache(taches)
@@ -60,4 +63,4 @@ def main():
                 print("\nChoix invalide ! Veuillez réesayer.")
                 
 if __name__ == "__main__":
-    menu()
+    main()
