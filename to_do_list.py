@@ -17,7 +17,11 @@ def ajouter_tache():
         tache = input("Entrez votre tâche : ")
         taches.append(tache)
         print(f"\nLa tache '{tache}' a été ajoutée à votre To Do List")
-        print(taches, "\n")
+
+def montrer_tache():
+    print("\nVoici votre To Do List : ")
+    for i, tache in enumerate(taches, start=1):
+        print(f"{i}. {tache}")
 
 def merci():
     print("\nA bientot dans votre To Do List !")
@@ -31,7 +35,7 @@ while True:
         case "1" :
             ajouter_tache()
         case "2" :
-            pass
+            montrer_tache()
         case "3" :
             pass
         case "4" :
