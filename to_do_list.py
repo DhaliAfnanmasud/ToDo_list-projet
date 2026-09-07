@@ -12,10 +12,12 @@ def menu():
     print("4. Quitter")
 
 def ajouter_tache():
-    tache = input("\nEntrez votre tâche : ")
-    taches.append(tache)
-    print(f"La tache '{tache}' a été ajoutée à votre To Do List")
-    print("\n",taches)
+    nb_taches = int(input("\nCombien de tâches voulez-vous ajouter ? : " ))
+    for _ in range(nb_taches):  
+        tache = input("Entrez votre tâche : ")
+        taches.append(tache)
+        print(f"\nLa tache '{tache}' a été ajoutée à votre To Do List")
+        print(taches, "\n")
 
 def merci():
     print("\nA bientot dans votre To Do List !")
