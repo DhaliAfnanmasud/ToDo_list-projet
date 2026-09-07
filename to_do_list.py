@@ -15,16 +15,16 @@ def ajouter_tache():
     nb_taches = int(input("\nCombien de tâches voulez-vous ajouter ? : " ))
     for _ in range(nb_taches):  
         tache = input("Entrez votre tâche : ")
-        taches.append(tache)
+        taches.append({"tache": tache, "status": "False"})
         print(f"\nLa tache '{tache}' a été ajoutée à votre To Do List")
 
 def montrer_tache():
     print("\nVoici votre To Do List : ")
     for i, tache in enumerate(taches, start=1):
-        print(f"{i}. {tache}")
+        print(f"{i}. {tache['tache']} - {'Terminée' if tache['status'] == 'True' else 'En cours'}")
 
-def merci():
-    print("\nA bientot dans votre To Do List !")
+def merci():  
+    print("\nA bientôt dans votre To Do List !")
 
 
 while True:
