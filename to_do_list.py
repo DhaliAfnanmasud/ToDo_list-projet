@@ -17,6 +17,9 @@ def ajouter_tache():
     print(f"La tache '{tache}' a été ajoutée à votre To Do List")
     print("\n",taches)
 
+def merci():
+    print("\nA bientot dans votre To Do List !")
+
 
 while True:
     menu()
@@ -30,7 +33,7 @@ while True:
         case "3" :
             pass
         case "4" :
-            print("\nA bientot dans votre To Do List !")
+            merci()
             break
         case _ :
-            print("\nChoix invalide ! Veuillez réesayer.")
+            print("\nChoix invalide ! Veuillez réesayer.") 
